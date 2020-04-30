@@ -28,3 +28,19 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# new guys.
+.vscode/
+Backups/
+CachedData/
+CachedExtensions/
+Cookies
+Cookies-journal
+Network Persistent State
+TransportSecurity
+User/
+languagepacks.json
+logs/
+machineid
+rapid_render.json
+storage.json
