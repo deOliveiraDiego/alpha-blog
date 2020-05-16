@@ -1,5 +1,4 @@
 @import "bootstrap";
-
 .navbar {
   background-color: #FDF6EA !important;
   background-color: black !important;
@@ -30,8 +29,7 @@
   height: 425px;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -42,4 +40,8 @@ body {
 
 #sticky-footer {
   flex-shrink: none;
-} 
+}
+
+.field_with_errors {
+  display: inline
+}
