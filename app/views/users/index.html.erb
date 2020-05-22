@@ -14,7 +14,9 @@
           <h5 class="card-title"><%= link_to gravatar_for(user, size: 150), user %></h5>
           <p class="card-text"><%= pluralize(user.articles.size, "article") %></p>
             <%= link_to 'Show profile', user, class: "btn btn-outline-success" %>
-            <%= link_to 'Edit profile', edit_user_path(user), class: "btn btn-outline-info" %>
+            <% if logged_in? && user == current_user %>
+              <%= link_to 'Edit profile', edit_user_path(user), class: "btn btn-outline-info" %>
+            <% end %>
           </div>
           <div class="card-footer text-muted">
             <small>Joined <%= time_ago_in_words(user.created_at) %> ago.</small>
@@ -25,6 +27,6 @@
   <% end %>
 </div>
 
-<div class="flickr_pagination">
+<div class="flickr_pagination mb-5">
   <%= will_paginate @users, :container => false %>
 </div>
